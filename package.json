@@ -1,0 +1,23 @@
+{
+  "name": "coinr",
+  "description": "Get latest ticker information for popular cryptocurrencies",
+  "author": "John Otander",
+  "version": "0.1.0",
+  "main": "index.js",
+  "files": [
+    "index.js"
+  ],
+  "scripts": {
+    "test": "ava"
+  },
+  "repository": "johnotander/coinr",
+  "keywords": [],
+  "license": "MIT",
+  "dependencies": {
+    "is-present": "^1.0.0",
+    "isomorphic-fetch": "^2.2.1"
+  },
+  "devDependencies": {
+    "ava": "*"
+  }
+}
