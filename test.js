@@ -19,6 +19,22 @@ test.cb('grabs ethereum data', t => {
     })
 })
 
+test.cb('grabs all currencies', t => {
+  t.plan(1)
+
+  coinr()
+    .then(d => {
+      console.log(d)
+      t.true(isPresent(d))
+      t.end()
+    })
+    .catch(e => {
+      console.log(e)
+      t.true(false)
+      t.end()
+    })
+})
+
 test.cb('rejects with unknown currency', t => {
   t.plan(1)
 
