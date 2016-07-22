@@ -1,8 +1,6 @@
 # coinr [![Build Status](https://secure.travis-ci.org/johnotander/coinr.svg?branch=master)](https://travis-ci.org/johnotander/coinr) [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](https://github.com/feross/standard)
 
-__Work in progress__
-
-Get latest ticker information for popular cryptocurrencies
+Get latest ticker information for popular cryptocurrencies from [coinmarketcap.com](http://coinmarketcap.com/).
 
 ## Installation
 
@@ -13,7 +11,7 @@ npm install --save coinr
 ## Usage
 
 ```javascript
-var coinr = require('coinr')
+const coinr = require('coinr')
 
 // Pass the full name
 coinr('ethereum').then(d => console.log(d))
@@ -22,6 +20,15 @@ coinr('Ethereum').then(d => console.log(d))
 // Or the ticker symbol
 coinr('eth').then(d => console.log(d))
 coinr('ETH').then(d => console.log(d))
+```
+
+You can also retrieve the cryptocurrency ticker map
+
+```javascript
+const tickers = require('coinr/tickers-map.json')
+
+tickers.eth // 'ethereum'
+tickers.btc // 'bitcoin'
 ```
 
 ## License
