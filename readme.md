@@ -15,7 +15,13 @@ npm install --save coinr
 ```javascript
 var coinr = require('coinr')
 
+// Pass the full name
 coinr('ethereum').then(d => console.log(d))
+coinr('Ethereum').then(d => console.log(d))
+
+// Or the ticker symbol
+coinr('eth').then(d => console.log(d))
+coinr('ETH').then(d => console.log(d))
 ```
 
 ## License
