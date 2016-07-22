@@ -40,7 +40,6 @@ test.cb('rejects with unknown currency', t => {
 
   coinr('foobar')
     .then(d => {
-      console.log(d)
       t.true(false)
       t.end()
     })

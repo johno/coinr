@@ -5,15 +5,22 @@
   "version": "0.1.2",
   "main": "index.js",
   "files": [
-    "index.js"
+    "index.js",
+    "tickers-map.json"
   ],
   "scripts": {
-    "test": "ava"
+    "test": "ava -v"
   },
   "repository": "johnotander/coinr",
-  "keywords": [],
+  "keywords": [
+    "crypto",
+    "currency",
+    "cryptocurrency",
+    "coin"
+  ],
   "license": "MIT",
   "dependencies": {
+    "is-blank": "^1.1.0",
     "is-present": "^1.0.0",
     "isomorphic-fetch": "^2.2.1"
   },
