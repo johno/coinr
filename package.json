@@ -2,7 +2,7 @@
   "name": "coinr",
   "description": "Get latest ticker information for popular cryptocurrencies",
   "author": "John Otander",
-  "version": "0.1.2",
+  "version": "1.0.0",
   "main": "index.js",
   "files": [
     "index.js",
