@@ -3,18 +3,17 @@ const isPresent = require('is-present')
 const isBlank = require('is-blank')
 
 const tickersMap = require('./tickers-map.json')
+const baseUrl = 'https://api.coinmarketcap.com/v1/ticker/'
 
-module.exports = function coinr (currency) {
-  const tickerBase = 'https://api.coinmarketcap.com/v1/ticker'
-  const url = isPresent(currency) ? `${tickerBase}/${currency}` : tickerBase 
-  return new Promise(function (resolve, reject) {
+module.exports = currency => {
+  return new Promise((resolve, reject) => {
     let currencyId = null
-    const baseUrl = 'https://api.coinmarketcap.com/v1/ticker/'
     let url = null
 
     if (isPresent(currency)) {
       currencyId = tickersMap[currency.toLowerCase()]
 
+      // Unknown currency passed
       if (isBlank(currencyId)) {
         return reject({ error: `${currency} is unknown` })
       }
@@ -24,9 +23,6 @@ module.exports = function coinr (currency) {
       url = baseUrl
     }
 
-
-    console.log(url)
-
     fetch(url)
       .then(d => {
         d.json().then(d => {
@@ -34,8 +30,6 @@ module.exports = function coinr (currency) {
           isPresent(response) ? resolve(response) : reject(response)
         })
       })
-      .catch(e => {
-        reject(e)
-      })
+      .catch(reject)
   })
 }
