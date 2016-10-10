@@ -1,6 +1,6 @@
 # coinr [![Build Status](https://secure.travis-ci.org/johnotander/coinr.svg?branch=master)](https://travis-ci.org/johnotander/coinr) [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](https://github.com/feross/standard)
 
-Get latest ticker information for popular cryptocurrencies from [coinmarketcap.com](http://coinmarketcap.com/).
+Get latest ticker information for popular cryptocurrencies from [coinmarketcap.com](http://coinmarketcap.com/). Quotes update [every 5 minutes](http://coinmarketcap.com/api/).
 
 ## Installation
 
