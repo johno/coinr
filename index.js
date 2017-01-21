@@ -11,12 +11,7 @@ module.exports = currency => {
     let url = null
 
     if (isPresent(currency)) {
-      currencyId = tickersMap[currency.toLowerCase()]
-
-      // Unknown currency passed
-      if (isBlank(currencyId)) {
-        return reject({ error: `${currency} is unknown` })
-      }
+      currencyId = tickersMap[currency.toLowerCase()] || currency
 
       url = `${baseUrl}${currencyId}`
     } else {
@@ -30,6 +25,6 @@ module.exports = currency => {
           isPresent(response) ? resolve(response) : reject(response)
         })
       })
-      .catch(reject)
+      .catch(() => reject('Failed to fetch currency data'))
   })
 }

@@ -12,11 +12,3 @@ test('grabs all currencies', async t => {
   const res = await coinr()
   t.true(isPresent(res))
 })
-
-test('rejects with unknown currency', async t => {
-  try {
-    const res = await coinr('foobar')
-  } catch (e) {
-    t.pass()
-  }
-})
