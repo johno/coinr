@@ -10,3 +10,4 @@
 - <https://github.com/zeit/next.js>
 - <https://github.com/zeit/micro>
 - <http://coinmarketcap.com>
+- <https://api.blockchain.info/charts/market-price?format=json&scale=1&timespan=all>
